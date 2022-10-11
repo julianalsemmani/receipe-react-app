@@ -34,13 +34,15 @@ export default function Veggie() {
           arrows: false,
           pagination: false,
           drag: 'free',
-          gap: '5rem'
+          gap: '3rem'
         }}>
           {veggie.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <div className='card'>
-                  <p className='card-text'>{recipe.title}</p>
+                  <div className='gradient'>
+                    <p className='card-text'>{recipe.title}</p>
+                  </div>
                   <img className='card-img' src={recipe.image} alt={recipe.title} />
                 </div>
               </SplideSlide>
